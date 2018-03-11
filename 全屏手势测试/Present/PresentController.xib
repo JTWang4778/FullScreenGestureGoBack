@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PresentController" customModule="全屏手势测试" customModuleProvider="target">
+            <connections>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fCR-Id-0eM">
+                    <rect key="frame" x="161.5" y="318.5" width="52" height="30"/>
+                    <state key="normal" title="dismiss"/>
+                    <connections>
+                        <action selector="didClickDismiss:" destination="-1" eventType="touchUpInside" id="mB2-fj-PnI"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VeC-w3-M0Y">
+                    <rect key="frame" x="161" y="386" width="53" height="30"/>
+                    <state key="normal" title="present"/>
+                    <connections>
+                        <action selector="didClickPresent:" destination="-1" eventType="touchUpInside" id="QW6-9A-cvV"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="VeC-w3-M0Y" firstAttribute="top" secondItem="fCR-Id-0eM" secondAttribute="bottom" constant="37.5" id="2gg-cO-duS"/>
+                <constraint firstItem="VeC-w3-M0Y" firstAttribute="centerX" secondItem="fCR-Id-0eM" secondAttribute="centerX" id="8EK-2N-4sV"/>
+                <constraint firstItem="fCR-Id-0eM" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="XFd-Vu-rmY"/>
+                <constraint firstItem="fCR-Id-0eM" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="dr9-pq-N47"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+        </view>
+    </objects>
+</document>
